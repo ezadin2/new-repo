@@ -12,9 +12,6 @@ app.use(cors(
 ));
 app.use(express.json())
 mongoose.connect('mongodb+srv://ezadinbadru55:esu0940715427@cluster0.qortey9.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0');
-
-
-mongoose.connect("mongodb://127.0.0.1:27017/crud")
 app.get("/",(req,res)=>{
     UserModel.find({})
     .then(users=>res.json(users))
